@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.3/angular.min.js"></script>
+    <script src="../../angular/js/components.js"></script>
+    <script src="../../angular/js/app.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" src="../static/home.css">
+    <title>Vector Addition</title>
+  </head>
+  <body>
+    <div class="container">
+    <tabs>
+      <pane title="X and Y input">
+	<form name="X and Y" ng-controller="rectangular">
+          x = <input type="number" ng-model="x" ng-change="recalculate()"> <br>
+          y = <input type="number" ng-model="y" ng-change="recalculate()"> <br>
+	  Polar Vector : {{ result }}
+	</form>
+      </pane>
+      <pane title="R and O input" >
+        <form name="r and o input" ng-controller="polar">
+	  r = <input type="number" ng-model="r" ng-change="recalculate()"> <br>
+	  o = <input type="number" ng-model="o" ng-change="recalculate()"> 
+	  radians : <input type="checkbox" ng-model="radians" 
+			   ng-change="convert('radians')"> 
+	  degrees : <input type="checkbox" ng-model="degrees" 
+			   ng-change="convert('degrees')"><br>
+	  Rectangular Vector : {{ x }},{{ y }}
+        </form>
+      </pane>
+    </tabs>
+    </div>
+  </body>
+</html>

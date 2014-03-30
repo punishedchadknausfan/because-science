@@ -1,0 +1,18 @@
+* {
+    font-family: "Open Sans Condensed Light";
+    background-color: #E0E4CC;
+    color: #7A7A7A;
+}
+
+div.container {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+#description a {
+    box-shadow: 2px 2px 12px grey;;
+    font-weight: 900;
+    text-decoration: none;
+}
